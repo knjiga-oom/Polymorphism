@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryWriter", "StoryWriter\StoryWriter.csproj", "{ADBDA0CF-C9AF-43B5-9C5B-2DFCCEF41959}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{20B9F375-5F90-4065-A05E-D307897994CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADBDA0CF-C9AF-43B5-9C5B-2DFCCEF41959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADBDA0CF-C9AF-43B5-9C5B-2DFCCEF41959}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADBDA0CF-C9AF-43B5-9C5B-2DFCCEF41959}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADBDA0CF-C9AF-43B5-9C5B-2DFCCEF41959}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20B9F375-5F90-4065-A05E-D307897994CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20B9F375-5F90-4065-A05E-D307897994CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20B9F375-5F90-4065-A05E-D307897994CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20B9F375-5F90-4065-A05E-D307897994CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4458FD86-EB31-49DC-8053-1B1F3216FB19}
+	EndGlobalSection
+EndGlobal
