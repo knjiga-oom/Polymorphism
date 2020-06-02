@@ -9,10 +9,25 @@ namespace Vsite.Oom.Polymorhism
             this.writer = writer;
         }
 
-        public void WriteHeading(string text)
+        private char GetHeadingUnderlineCharacter(int level)
+        {
+            switch (level)
+            {
+                case 1:
+                    return '=';
+                case 2:
+                    return '-';
+                case 3:
+                    return '.';
+                default:
+                    return ' ';
+            }
+        }
+
+        public void WriteHeading(string text, int level)
         {
             writer.WriteLine(text);
-            writer.WriteLine(new string('=', text.Length));
+            writer.WriteLine(new string(GetHeadingUnderlineCharacter(level), text.Length));
             writer.WriteLine(); // append empty line
         }
 

@@ -10,8 +10,9 @@ namespace Vsite.Oom.Polymorhism
             using (TextWriter writer = new StreamWriter("MojText.txt"))
             {
                 StoryWriter story = new StoryWriter(writer);
-                story.WriteHeading("Naslov");
+                story.WriteHeading("Naslov", 1);
                 story.WriteParagraph("Ovo je prvi odlomak");
+                story.WriteHeading("Podnaslov", 2);
                 story.WriteHyperlink("Ovo je link na", "www.amazon.com");
                 story.WriteParagraph("Ovo je drugi odlomak");
 
