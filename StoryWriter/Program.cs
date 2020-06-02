@@ -9,14 +9,16 @@ namespace Vsite.Oom.Polymorhism
         {
             using (TextWriter writer = new StreamWriter("MojText.txt"))
             {
-                StoryWriter story = new StoryWriter(writer);
-                story.WriteHeading("Naslov", 1);
-                story.WriteParagraph("Ovo je prvi odlomak");
-                story.WriteHeading("Podnaslov", 2);
-                story.WriteHyperlink("Ovo je link na", "www.amazon.com");
-                story.WriteParagraph("Ovo je drugi odlomak");
+                Story story = new Story(new PlainTextFormatter());
+                story.AddHeading("Naslov", 1);
+                story.AddParagraphs(new string[]{ "Ovo je prvi odlomak", "Ovo je drugi odlomak"});
+                story.AddHeading("Podnaslov", 2);
+                story.Hyperlink("Ovo je link na", "www.amazon.com");
+                story.AddParagraphs(new string[] { "Ovo je treći odlomak" });
 
-                Console.WriteLine(writer.ToString());
+                writer.Write(story.ToString());
+
+                Console.WriteLine(story.ToString());
             }
         }
     }

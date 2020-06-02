@@ -2,13 +2,8 @@
 
 namespace Vsite.Oom.Polymorhism
 {
-    public class StoryWriter
+    public class PlainTextFormatter
     {
-        public StoryWriter(TextWriter writer)
-        {
-            this.writer = writer;
-        }
-
         private char GetHeadingUnderlineCharacter(int level)
         {
             switch (level)
@@ -42,6 +37,11 @@ namespace Vsite.Oom.Polymorhism
             writer.WriteLine($"{caption} [{link}]");
         }
 
-        private TextWriter writer;
+        public override string ToString()
+        {
+            return writer.ToString();
+        }
+
+        private TextWriter writer = new StringWriter();
     }
 }

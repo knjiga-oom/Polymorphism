@@ -2,9 +2,9 @@
 {
     public class Story
     {
-        public Story(StoryWriter writer)
+        public Story(PlainTextFormatter formatter)
         {
-            this.writer = writer;
+            this.writer = formatter;
         }
 
         public void AddHeading(string text, int level)
@@ -12,17 +12,22 @@
             writer.WriteHeading(text, level);
         }
 
-        public void AddParagraph(string text)
+        public void AddParagraphs(string[] text)
         {
-            writer.WriteParagraph(text);
+            foreach (string paragraph in text)
+                writer.WriteParagraph(paragraph);
         }
-
 
         public void Hyperlink(string caption, string link)
         {
             writer.WriteHyperlink(caption, link);
         }
 
-        private readonly StoryWriter writer;
+        public override string ToString()
+        {
+            return writer.ToString();
+        }
+
+        private readonly PlainTextFormatter writer;
     }
 }
