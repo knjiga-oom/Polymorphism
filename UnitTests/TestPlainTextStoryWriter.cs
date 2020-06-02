@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Vsite.Oom.Polymorhism
 {
     [TestClass]
-    public class TestPlainStoryWriter
+    public class TestPlainTextStoryWriter
     {
         [TestMethod]
         public void Heading1ContainsCaptionUnderlinedWithEqualsAndAnEmptyLine()
@@ -72,6 +72,21 @@ namespace Vsite.Oom.Polymorhism
                 Assert.AreEqual("This is a paragraph", lines[0]);
                 Assert.AreEqual(0, lines[1].Length);
                 Assert.AreEqual(0, lines[2].Length);
+            }
+        }
+
+        [TestMethod]
+        public void HyperlinkContainsTextAndEmptyLine()
+        {
+            using (StringWriter writer = new StringWriter())
+            {
+                StoryWriter sw = new StoryWriter(writer);
+                sw.WriteHyperlink("Caption", "link");
+
+                string[] delimiters = { Environment.NewLine, @"\n" };
+                string[] lines = writer.ToString().Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
+                Assert.AreEqual(1, lines.Length);
+                Assert.AreEqual("Caption [link]", lines[0]);
             }
         }
     }
