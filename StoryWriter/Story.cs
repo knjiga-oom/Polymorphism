@@ -1,5 +1,6 @@
 ﻿namespace Vsite.Oom.Polymorhism
 {
+    // This file MUST NOT be changed!
     public class Story
     {
         public Story(PlainTextFormatter formatter)

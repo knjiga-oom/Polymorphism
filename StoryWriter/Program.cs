@@ -10,6 +10,7 @@ namespace Vsite.Oom.Polymorhism
             using (TextWriter writer = new StreamWriter("MojText.txt"))
             {
                 Story story = new Story(new PlainTextFormatter());
+                // following lines MUST NOT be changed!
                 story.AddHeading("Naslov", 1);
                 story.AddParagraphs(new string[]{ "Ovo je prvi odlomak", "Ovo je drugi odlomak"});
                 story.AddHeading("Podnaslov", 2);
