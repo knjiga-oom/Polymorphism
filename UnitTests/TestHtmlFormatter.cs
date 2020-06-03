@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Vsite.Oom.Polymorhism
 {
     [TestClass]
-    public class TestHtmlStoryFormatter
+    public class TestHtmlFormatter
     {
         [TestMethod]
         public void Heading1ContainsCaptionWithH1Tags()

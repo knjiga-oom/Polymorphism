@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Vsite.Oom.Polymorhism
 {
     [TestClass]
-    public class TestPlainTextStoryFormatter
+    public class TestPlainTextFormatter
     {
         [TestMethod]
         public void Heading1ContainsCaptionUnderlinedWithEqualsAndAnEmptyLine()
